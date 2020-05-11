@@ -1,0 +1,45 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{float}
+\usepackage{forest, leipzig, linguex, flexisym}
+\usepackage[normalem]{ulem}
+\usepackage{amssymb, textcomp}
+\forestset{qtree/.style={for tree={parent anchor=south, 
+           child anchor=north,align=center,inner sep=0pt}}}
+\setlength{\marginparwidth}{2cm}
+\usepackage{todonotes}
+\usepackage{hyperref}
+
+
+\title{A Grammar of Lezgian}
+\author{Allen Mao}
+\date{12 May 2020}
+
+\makeglossaries
+\input{gloss-entries}
+\begin{document}
+
+\maketitle
+\tableofcontents
+\section{Introduction}
+\input{intro.tex}
+\section{Phrase Structure}
+\input{phrase-struct.tex}
+\subsection{Trees}
+\label{subsec:trees}
+\input{trees.tex}
+\section{Special Topics}
+\label{sec:spec-topics}
+\subsection{Questions}
+\input{questions.tex}
+\subsection{Case/Agreement}
+\input{case-agree.tex}
+\section{Abbreviations}
+\printglossaries
+\section{References}
+\begin{thebibliography}{}
+\bibitem{hasp}Haspelmath, M. (2011). \textit{A grammar of Lezgian (Vol. 9).} Walter de Gruyter.
+
+\end{thebibliography}
+\end{document}
