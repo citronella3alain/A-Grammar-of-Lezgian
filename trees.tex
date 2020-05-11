@@ -1,57 +1,55 @@
 \begin{figure}[H]
     \centering
-\begin{forest}, baseline, qtree
-    [T'
-        [$V_{\text{AUX}}P$
-            [$V_{\text{AUX}}'$
-                [VP [V' [V \\ fiz \\ go]]
+    \begin{minipage}{.3\textwidth}
+        \centering
+        \begin{forest}, baseline, qtree
+            [T'
+                [$V_{\text{AUX}}P$
+                    [$V_{\text{AUX}}'$
+                        [VP [V' [V \\ fiz \\ go]]
+                        ]
+                        [$V_{\text{AUX}}$,name=src]
+                    ]
                 ]
-                [$V_{\text{AUX}}$,name=src]
+                [$V_{\text{AUX}}T$\\ zwa-$\varnothing$ \\ \Impf,name=dest]
             ]
-        ]
-        [$V_{\text{AUX}}T$\\ zwa-$\varnothing$ \\ \Impf,name=dest]
-    ]
-\draw[->] (src) to[out=north east, in=south west] (dest);
-\end{forest}
-    \caption{Imperfective affirmative}
-    \label{fig:sent5a}
-\end{figure}
-\begin{figure}[H]
-    \centering
-\begin{forest}, baseline, qtree
-    [T'
-        [$V_{\text{AUX}}P$
-            [$V_{\text{AUX}}'$
-                [VP [V' [V \\ fiz \\ go]]
+        \draw[->] (src) to[out=north east, in=south west] (dest);
+        \end{forest}
+    \end{minipage}
+    \begin{minipage}{.3\textwidth}
+        \begin{forest}, baseline, qtree
+            [T'
+                [$V_{\text{AUX}}P$
+                    [$V_{\text{AUX}}'$
+                        [VP [V' [V \\ fiz \\ go]]
+                        ]
+                        [$V_{\text{AUX}}$,name=src]
+                    ]
                 ]
-                [$V_{\text{AUX}}$,name=src]
+                [$V_{\text{AUX}}T$\\ zwa-\v{c} \\ \Impf-\Neg,name=dest]
             ]
-        ]
-        [$V_{\text{AUX}}T$\\ zwa-\v{c} \\ \Impf-\Neg,name=dest]
-    ]
-\draw[->] (src) to[out=north east, in=south west] (dest);
-\end{forest}
-    \caption{Imperfective Negative}
-    \label{fig:sent5b}
-\end{figure}
-\begin{figure}[H]
-    \centering
-\begin{forest}, baseline, qtree
-    [T'
-        [$V_{\text{AUX}}P$
-            [$V_{\text{AUX}}'$
-                [VP [V' [V \\ fiz \\ go]]
+        \draw[->] (src) to[out=north east, in=south west] (dest);
+        \end{forest}
+    \end{minipage}
+    \begin{minipage}{.3\textwidth}
+        \begin{forest}, baseline, qtree
+            [T'
+                [$V_{\text{AUX}}P$
+                    [$V_{\text{AUX}}'$
+                        [VP [V' [V \\ fiz \\ go]]
+                        ]
+                        [$V_{\text{AUX}}$,name=src]
+                    ]
                 ]
-                [$V_{\text{AUX}}$,name=src]
+                [$V_{\text{AUX}}T$\\ zwa-j \\ \Impf-\Pst,name=dest]
             ]
-        ]
-        [$V_{\text{AUX}}T$\\ zwa-j \\ \Impf-\Pst,name=dest]
-    ]
-\draw[->] (src) to[out=north east, in=south west] (dest);
-\end{forest}
-    \caption{Past Imperfective Affirmative}
-    \label{fig:sent5c}
+        \draw[->] (src) to[out=north east, in=south west] (dest);
+        \end{forest}
+    \end{minipage}
+    \caption{Imperfective affirmative, Imperfective Negative, Past Imperfective Affirmative}
+    \label{fig:sent5}
 \end{figure}
+
 \begin{figure}[H]
     \centering
 \begin{forest}, baseline, qtree
@@ -102,7 +100,7 @@
                                 [N \\ Professor \\ professor]
                             ]
                         ]
-                        [D \\ di-$\varnothing$ \\ \Obl \Erg]
+                        [D \\ di-$\varnothing$ \\ \Obl-\Erg]
                     ]
                 ]
                 [T'
@@ -116,7 +114,7 @@
                                                 [$V_{AUX}P$
                                                     [$V_{AUX}'$
                                                         [VP
-                                                            [\sout{DP}]
+                                                            [\sout{DP},name=leftDP]
                                                             [V'
                                                                 [DP [D' [NP[N'[N \\ ktab]]][D]]]
                                                                 [V \\ k'el \\ read]
@@ -135,13 +133,13 @@
                                     [D]
                                 ]
                             ]
-                            [\sout{V}]
+                            [\sout{V},name=leftV]
                         ]
                     ]
-                    [\sout{V-T}]
+                    [\sout{V-T},name=leftT]
                 ]
             ]
-            [V-T-C \\ ja-$\varnothing$-ni \\ \Cop-$\varnothing$-\Q]
+            [V-T-C \\ ja-$\varnothing$-ni \\ \Cop-$\varnothing$-\Q,name=leftC]
         ]
     ]
     [Conj \\ ja ta\^{x}ajt'a \\ or]
@@ -175,15 +173,20 @@
                                 [D \\ $\varnothing_D$]
                             ]
                         ]
-                        [V]
+                        [V,name=rightV]
                     ]
                 ]
-                [V-T]
+                [V-T,name=rightT]
             ]
         ]
-        [V-T-C \\ \Cop-$\varnothing$-\Q]
+        [V-T-C \\ \Cop-$\varnothing$-\Q,name=rightC]
     ]]
 ]
+\draw[->] (leftDP) to[out=north west, in=west] (newprofdp);
+\draw[->] (leftV) to[out=north east, in=south] (leftT);
+\draw[->] (leftT) to[out=north east, in=south] (leftC);
+\draw[->] (rightV) to[out=north east, in=south] (rightT);
+\draw[->] (rightT) to[out=north east, in=south] (rightC);
 \end{forest}
     \caption{Caption}
     \label{fig:my_label}
