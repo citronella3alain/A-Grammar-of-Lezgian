@@ -1,19 +1,24 @@
 \begin{figure}[H]
     \centering
     \begin{forest}, baseline, qtree
-        [TP
-            [DP
-                [D'
-                    [D \\ Zun \\ 1.\Sg:\Abs]
+    [TP
+        [T'
+            [$V_{AUX}P$
+                [$V_{AUX}'$
+                    [VP
+                        [V'
+                            [DP
+                                [D' [D \\ Zun \\ 1\Sg.\Abs]]
+                            ]
+                            [\sout{V},name=v]
+                        ]
+                    ]
+                    [\sout{$V_{AUX}$},name=vaux]
                 ]
-            ]
-            [T'
-                [VP
-                    [V' [V \\ ata \\ come]]
-                ]
-                [T \\ -na \\ \Aori]
-            ]
-        ]
+            [V-$V_{AUX}$.T \\ ata-na \\ come-\Aori,name=t]
+    ]]]
+    \draw[->](v)to[out=north east, in=south](vaux);
+    \draw[->](vaux)to[out=south east, in=south](t);
     \end{forest}
     \caption{Tree for gloss \ref{sent:ex5}}
     \label{fig:ex5}
@@ -23,7 +28,7 @@
     \begin{minipage}{.3\textwidth}
         \centering
         \begin{forest}, baseline, qtree
-            [T'
+            [TP[T'
                 [$V_{\text{AUX}}P$
                     [$V_{\text{AUX}}'$
                         [VP [V' [V \\ fiz \\ go]]
@@ -31,14 +36,14 @@
                         [\sout{$V_{\text{AUX}}$},name=src]
                     ]
                 ]
-                [$V_{\text{AUX}}T$\\ zwa-$\varnothing$ \\ \Impf,name=dest]
-            ]
+                [$V_{\text{AUX}}T$\\ zwa-$\varnothing$ \\ \Impf-$\varnothing$,name=dest]
+            ]]
         \draw[->] (src) to[out=north east, in=south west] (dest);
         \end{forest}
     \end{minipage}
     \begin{minipage}{.3\textwidth}
         \begin{forest}, baseline, qtree
-            [T'
+            [TP[T'
                 [$V_{\text{AUX}}P$
                     [$V_{\text{AUX}}'$
                         [VP [V' [V \\ fiz \\ go]]
@@ -47,13 +52,13 @@
                     ]
                 ]
                 [$V_{\text{AUX}}T$\\ zwa-\v{c} \\ \Impf-\Neg,name=dest]
-            ]
+            ]]
         \draw[->] (src) to[out=north east, in=south west] (dest);
         \end{forest}
     \end{minipage}
     \begin{minipage}{.3\textwidth}
         \begin{forest}, baseline, qtree
-            [T'
+            [TP[T'
                 [$V_{\text{AUX}}P$
                     [$V_{\text{AUX}}'$
                         [VP [V' [V \\ fiz \\ go]]
@@ -62,7 +67,7 @@
                     ]
                 ]
                 [$V_{\text{AUX}}T$\\ zwa-j \\ \Impf-\Pst,name=dest]
-            ]
+            ]]
         \draw[->] (src) to[out=north east, in=south west] (dest);
         \end{forest}
     \end{minipage}
@@ -79,7 +84,7 @@
         [DP [D'
                 [NP [N' [N \\ Betxoven \\ Beethoven]
                                 ]]
-            [D \\ .a-n \\ \Gen]
+            [D \\ .a-n \\ \Obl-\Gen]
                 ]]
                     [D'
                         [NP [N'[N \\ muzyka \\ music]]]
@@ -108,7 +113,7 @@
 \end{figure}
 \begin{figure}[H]
     \centering
-\begin{forest}, baseline, qtree
+\scalebox{0.8}{\begin{forest}, baseline, qtree
 [CP
     [CP
         [C'
@@ -129,37 +134,40 @@
                             [DP
                                 [D'
                                     [NP
-                                        [TP
-                                            [T'
-                                                [$V_{AUX}P$
-                                                    [$V_{AUX}'$
-                                                        [VP
-                                                            [\sout{DP},name=leftDP]
-                                                            [V'
-                                                                [DP [D' [NP[N'[N \\ ktab]]][D]]]
-                                                                [V \\ k'el \\ read]
+                                        [CP [C'
+                                            [TP
+                                                [T'
+                                                    [$V_{AUX}P$
+                                                        [$V_{AUX}'$
+                                                            [VP
+                                                                [\sout{DP},name=leftDP]
+                                                                [V'
+                                                                    [DP [D' [NP[N'[N \\ ktab]]][D \\ $\varnothing_D$]]]
+                                                                    [\sout{V},name=leftV2]
+                                                                ]
                                                             ]
+                                                            [\sout{$V_{AUX}$},name=leftVaux2]
                                                         ]
-                                                        [$V_{AUX}$ \\ zawa \\ \Impf]
                                                     ]
+                                                    [\sout{T},name=leftT2]
                                                 ]
-                                                [T \\ j \\ \Ptcp]
                                             ]
-                                        ]
+                                            [V-$V_{AUX}$-T-C \\ k'el-zawa-j-$\varnothing$ \\ read-\Impf-\Ptcp,name=leftC2]
+                                        ]]
                                         [N'
                                             [N \\ di \\ \Sbstz]
                                         ]
                                     ]
-                                    [D]
+                                    [D \\ $\varnothing_D$]
                                 ]
                             ]
-                            [\sout{V},name=leftV]
+                            [\sout{V},name=leftV1]
                         ]
                     ]
-                    [\sout{V-T},name=leftT]
+                    [\sout{V-T},name=leftT1]
                 ]
             ]
-            [V-T-C \\ ja-$\varnothing$-ni \\ \Cop-$\varnothing$-\Q,name=leftC]
+            [V-T-C \\ ja-$\varnothing$-ni \\ \Cop-$\varnothing$-\Q,name=leftC1]
         ]
     ]
     [Conj \\ ja ta\^{x}ajt'a \\ or]
@@ -171,19 +179,24 @@
                         [DP
                             [D'
                                 [NP
-                                    [TP
-                                        [T'
-                                            [$V_{AUX}P$
-                                                [$V_{AUX}'$
-                                                    [VP
-                                                        [V'
-                                                            [V  \\ k\^{x}i \\ write]
+                                    [CP
+                                        [C'
+                                            [TP
+                                                [T'
+                                                [$V_{AUX}P$
+                                                    [$V_{AUX}'$
+                                                        [VP
+                                                            [V'
+                                                                [V  \\ k\^{x}i \\ write]
+                                                            ]
                                                         ]
+                                                        [$V_{AUX}$ \\ zawa \\ \Impf]
                                                     ]
-                                                    [$V_{AUX}$ \\ zawa \\ \Impf]
+                                                ]
+                                                    [T \\ j \\ \Ptcp]
                                                 ]
                                             ]
-                                            [T \\ j \\ \Ptcp]
+                                            [V-$V_{AUX}$-T-C]
                                         ]
                                     ]
                                     [N'
@@ -193,21 +206,24 @@
                                 [D \\ $\varnothing_D$]
                             ]
                         ]
-                        [V,name=rightV]
+                        [V,name=rightV1]
                     ]
                 ]
-                [V-T,name=rightT]
+                [V-T,name=rightT1]
             ]
         ]
-        [V-T-C \\ \Cop-$\varnothing$-\Q,name=rightC]
+        [V-T-C \\ \Cop-$\varnothing$-\Q,name=rightC1]
     ]]
 ]
 \draw[->] (leftDP) to[out=north west, in=west] (newprofdp);
-\draw[->] (leftV) to[out=north east, in=south] (leftT);
-\draw[->] (leftT) to[out=north east, in=south] (leftC);
-\draw[->] (rightV) to[out=north east, in=south] (rightT);
-\draw[->] (rightT) to[out=north east, in=south] (rightC);
-\end{forest}
+\draw[->] (leftV1) to[out=north east, in=south] (leftT1);
+\draw[->] (leftT1) to[out=north east, in=south] (leftC1);
+\draw[->] (leftV2) to[out=north east, in=south] (leftVaux2);
+\draw[->] (leftVaux2) to[out=north east, in=south] (leftT2);
+\draw[->] (leftT2) to[out=east, in=south] (leftC2);
+\draw[->] (rightV1) to[out=north east, in=south] (rightT1);
+\draw[->] (rightT1) to[out=north east, in=south] (rightC1);
+\end{forest}}
     \caption{Tree for \ref{sent:ex4b}}
     \label{fig:sent4b}
 \end{figure}
