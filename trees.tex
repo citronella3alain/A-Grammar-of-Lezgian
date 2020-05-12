@@ -46,7 +46,7 @@
         \draw[->] (src) to[out=north east, in=south west] (dest);
         \end{forest}
     \end{minipage}
-    \caption{Imperfective affirmative, Imperfective Negative, Past Imperfective Affirmative}
+    \caption{Imperfective affirmative, Imperfective Negative, Past Imperfective Affirmative from gloss \ref{sent:ex5}}
     \label{fig:sent5}
 \end{figure}
 
@@ -188,8 +188,8 @@
 \draw[->] (rightV) to[out=north east, in=south] (rightT);
 \draw[->] (rightT) to[out=north east, in=south] (rightC);
 \end{forest}
-    \caption{Caption}
-    \label{fig:my_label}
+    \caption{Tree for \ref{sent:ex4b}}
+    \label{fig:sent4b}
 \end{figure}
 \begin{figure}[H]
     \centering
@@ -220,152 +220,172 @@
 \end{figure}
 \begin{figure}[H]
     \centering
-\begin{forest}, baseline, qtree
-[DP [D' [NP [N'
-    [CP [C'
-        [TP [T'
-            [VP
-                [V'
-                    [PP [P'
-                        [DP
-                            [DP
-                                [D' [NP [N' [N \\ kolkhoz \\ collective farm]]]
-                                    [D \\ di-n \\ \Gen]
+\begin{minipage}{.4\textwidth}
+    \begin{forest}, baseline, qtree
+        [DP [D' [NP [N'
+            [CP [C'
+                [TP [T'
+                    [VP
+                        [V'
+                            [PP [P'
+                                [DP
+                                    [DP
+                                        [D' [NP [N' [N \\ kolkhoz \\ collective farm]]]
+                                            [D \\ di-n \\ \Gen]
+                                        ]
+                                    ]
+                                    [D'
+                                        [NP [N' [N \\ ja\v{s}aji\v{s} \\ life]]]
+                                        [D \\ di \\ \Obl]
+                                    ]
                                 ]
-                            ]
-                            [D'
-                                [NP [N' [N \\ ja\v{s}aji\v{s} \\ life]]]
-                                [D \\ di \\ \Obl]
-                            ]
+                            [P \\ -kaj \\ \Sbelc]]]
+                            [V' [V \\ k\^{x}e \\ write]]
                         ]
-                    [P \\ -kaj \\ \Sbelc]]]
-                    [V' [V \\ k\^{x}e \\ write]]
-                ]
-            ]
-            [T \\ -nwa- \\ \Prf]
-        ]]
-        [C \\ -j \\ \Ptcp]
-    ]] 
-    [N'[N\\ rasskaz-ar \\ story-\Pl]]]][D \\ $\varnothing_D$]]]
-\end{forest}
-\caption{Complete tree for gloss \ref{sent:ex2a}}
-\label{fig:ex2a}
-\end{figure}
-\begin{figure}[H]
-    \centering
-\begin{forest}, baseline, qtree
-[DP [D'
-    [NP [N'
-        [AdjP [Adj'
-            [PP [P'
-                [DP [D'
-                        [NP
-                            [N' [N \\ revolucija \\ revolution]]
-                        ]
-                        [D \\ di \\ \Obl]
+                    ]
+                    [T \\ -nwa- \\ \Prf]
                 ]]
-                [P \\ laj \\ \Srelc]
+                [C \\ -j \\ \Ptcp]
+            ]] 
+            [N'[N\\ rasskaz-ar \\ story-\Pl]]]][D \\ $\varnothing_D$]]]
+        \end{forest}   
+\end{minipage}
+\hfill\begin{minipage}{.4\textwidth}
+    \begin{forest}, baseline, qtree
+        [DP [D'
+            [NP [N'
+                [AdjP [Adj'
+                    [PP [P'
+                        [DP [D'
+                                [NP
+                                    [N' [N \\ revolucija \\ revolution]]
+                                ]
+                                [D \\ di \\ \Obl]
+                        ]]
+                        [P \\ laj \\ \Srelc]
+                    ]]
+                    [Adj \\ wikikan \\ previous]
+                ]]
+                [N'[N \\ \"{u}m\"{u}r \\ life]]
             ]]
-            [Adj \\ wikikan \\ previous]
+            [D  \\ $\varnothing_D$]
         ]]
-        [N'[N \\ \"{u}m\"{u}r \\ life]]
-    ]]
-    [D  \\ $\varnothing_D$]
-]]
-\end{forest}
-    \caption{Complete Tree for gloss \ref{sent:ex2b}}
-    \label{fig:ex2b}
+        \end{forest}
+\end{minipage}
+
+\caption{Complete tree for gloss \ref{sent:ex2a} and \ref{sent:ex2b}}
+\label{fig:ex2}
 \end{figure}
+
 \begin{figure}[H]
     \centering
     \begin{forest}, baseline, qtree
-[TP
-    [DP
-        [D'
-            [NP
-                [N'
-                    [N \\ kac \\ cat]
+        [TP
+            [DP
+                [D'
+                    [D \\ Zun \\ 1.\Sg:\Abs]
                 ]
             ]
-            [D \\ $\varnothing_D$]
-        ]
-    ]
-    [T'
-        [VP
-            [V'
-                [PP
-                    [P'
-                        [DP 
-                            [D'
-                                [NP
-                                    [N'
-                                        [N \\ stol \\ table]
-                                    ]
-                                ]
-                                [D'
-                                    [D \\ di-n \\ \Gen]
-                                ]
-                            ]
-                        ]
-                        [P \\ k'anik \\ under]
-                    ]
+            [T'
+                [VP
+                    [V' [V \\ ata \\ come]]
                 ]
-                [V'
-                    [V \\ aka\^{x} \\ enter]
-                ]
+                [T \\ -na \\ \Aori]
             ]
         ]
-        [T \\ -na \\ \Aori]
-    ]
-]
     \end{forest}
-    \caption{Complete Tree for gloss \ref{sent:ex3a}}
-    \label{fig:ex3a}
+    \caption{Tree for gloss \ref{sent:ex5}}
+    \label{fig:ex5}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \begin{forest}, baseline, qtree
-[TP
-    [DP
-        [D'
-            [NP
-                [N'
-                    [N \\ kac \\ cat]
-                ]
-            ]
-            [D \\ $\varnothing_D$]
-        ]
-    ]
-    [T'
-        [VP
-            [V'
-                [PP
-                    [P'
-                        [DP 
-                            [D'
-                                [NP
-                                    [N'
-                                        [N \\ stol \\ table]
-                                    ]
-                                ]
-                                [D'
-                                    [D \\ di-n \\ \Gen]
-                                ]
+    \begin{minipage}{.4\textwidth}
+        \begin{forest}, baseline, qtree
+            [TP
+                [DP
+                    [D'
+                        [NP
+                            [N'
+                                [N \\ kac \\ cat]
                             ]
                         ]
-                        [P \\ k'anikaj \\ from.under]
+                        [D \\ $\varnothing_D$]
                     ]
                 ]
-                [V'
-                    [V \\ xkec' \\ go.out]
+                [T'
+                    [VP
+                        [V'
+                            [PP
+                                [P'
+                                    [DP 
+                                        [D'
+                                            [NP
+                                                [N'
+                                                    [N \\ stol \\ table]
+                                                ]
+                                            ]
+                                            [D'
+                                                [D \\ di-n \\ \Gen]
+                                            ]
+                                        ]
+                                    ]
+                                    [P \\ k'anik \\ under]
+                                ]
+                            ]
+                            [V'
+                                [V \\ aka\^{x} \\ enter]
+                            ]
+                        ]
+                    ]
+                    [T \\ -na \\ \Aori]
                 ]
             ]
-        ]
-        [T \\ -na \\ \Aori]
-    ]
-]
-    \end{forest}
-    \caption{Complete tree for gloss \ref{sent:ex3b}}
-    \label{fig:sent3b}
+        \end{forest}        
+    \end{minipage}
+    \hfill\begin{minipage}{.4\textwidth}
+        \begin{forest}, baseline, qtree
+            [TP
+                [DP
+                    [D'
+                        [NP
+                            [N'
+                                [N \\ kac \\ cat]
+                            ]
+                        ]
+                        [D \\ $\varnothing_D$]
+                    ]
+                ]
+                [T'
+                    [VP
+                        [V'
+                            [PP
+                                [P'
+                                    [DP 
+                                        [D'
+                                            [NP
+                                                [N'
+                                                    [N \\ stol \\ table]
+                                                ]
+                                            ]
+                                            [D'
+                                                [D \\ di-n \\ \Gen]
+                                            ]
+                                        ]
+                                    ]
+                                    [P \\ k'anikaj \\ from.under]
+                                ]
+                            ]
+                            [V'
+                                [V \\ xkec' \\ go.out]
+                            ]
+                        ]
+                    ]
+                    [T \\ -na \\ \Aori]
+                ]
+            ]
+        \end{forest}        
+    \end{minipage}
+    \caption{Complete Tree for gloss \ref{sent:ex3a} and \ref{sent:ex3b}}
+    \label{fig:sent3}
 \end{figure}
 
