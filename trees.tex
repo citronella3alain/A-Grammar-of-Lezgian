@@ -1,28 +1,67 @@
 \begin{figure}[H]
     \centering
-    \begin{forest}, baseline, qtree
-    [TP
-        [T'
-            [$V_{AUX}P$
-                [$V_{AUX}'$
-                    [VP
-                        [V'
-                            [DP
-                                [D' [D \\ Zun \\ 1\Sg.\Abs]]
+    \begin{minipage}{.4\textwidth}
+        \scalebox{.75}{
+            \begin{forest}, baseline, qtree
+                [TP
+                    [T'
+                        [$V_{AUX}P$
+                            [$V_{AUX}'$
+                                [VP
+                                    [V'
+                                        [DP
+                                            [D' [D \\ Zun \\ 1\Sg.\Abs]]
+                                        ]
+                                        [\sout{V},name=v]
+                                    ]
+                                ]
+                                [\sout{$V_{AUX}$},name=vaux]
                             ]
-                            [\sout{V},name=v]
-                        ]
                     ]
-                    [\sout{$V_{AUX}$},name=vaux]
+                    [V-$V_{AUX}$.T \\ ata-na \\ come-\Aori,name=t]
+                ]]
+                \draw[->](v)to[out=north east, in=south](vaux);
+                \draw[->](vaux)to[out=south east, in=south](t);
+            \end{forest}
+        }
+    \end{minipage}
+    \begin{minipage}{.4\textwidth}
+        \scalebox{.6}{
+            \begin{forest}, baseline, qtree
+                [TP
+                    [T'
+                        [$V_{AUX}P$ [$V_{AUX}'$
+                            [VP
+                                [DP 
+                                    [DP [DP [D' [D \\ ]]]
+                                        [D' [D \\ Zi \\ I:\Gen]] 
+                                        ] 
+                                        [D' 
+                                            [NP 
+                                                [N' 
+                                                    [AdjP [Adj' [Adj \\ \v{g}we\v{c}'i \\ little]]]
+                                                    [N' [N \\ wax \\ sister]]
+                                                ]
+                                            ] 
+                                    [D \\ $\varnothing_D$] 
+                                ]
+                            ]
+                                [V' [\sout{V},name=v]]
+                            ]
+                            [\sout{V-$V_{AUX}$},name=vaux]
+                        ]]
+                        [V-$V_{AUX}$.T \\ ata-na \\ come-\Aori,name=t]
+                    ]
                 ]
-            [V-$V_{AUX}$.T \\ ata-na \\ come-\Aori,name=t]
-    ]]]
-    \draw[->](v)to[out=north east, in=south](vaux);
-    \draw[->](vaux)to[out=south east, in=south](t);
-    \end{forest}
-    \caption{Tree for gloss \ref{sent:ex5}}
-    \label{fig:ex5}
+                \draw[->] (v) to[out=north east, in=south] (vaux);
+                \draw[->] (vaux) to[out=north east, in=south] (t);
+            \end{forest}    
+        }
+    \end{minipage}
+    \caption{Tree for gloss \ref{sent:ex1}}
+    \label{fig:ex1}
 \end{figure}
+
 \begin{figure}[H]
     \centering
     \begin{minipage}{.3\textwidth}
@@ -187,16 +226,16 @@
                                                     [$V_{AUX}'$
                                                         [VP
                                                             [V'
-                                                                [V  \\ k\^{x}i \\ write]
+                                                                [\sout{V},name=rightV2]
                                                             ]
                                                         ]
-                                                        [$V_{AUX}$ \\ zawa \\ \Impf]
+                                                        [\sout{V-$V_{AUX}$},name=rightVaux2]
                                                     ]
                                                 ]
-                                                    [T \\ j \\ \Ptcp]
+                                                    [\sout{V-$V_{AUX}$T},name=rightT2]
                                                 ]
                                             ]
-                                            [V-$V_{AUX}$-T-C]
+                                            [V-$V_{AUX}$-T-C \\ k\^{x}i-zawa-j-$\varnothing$ \\ write-\Impf-\Ptcp,name=rightC2]
                                         ]
                                     ]
                                     [N'
@@ -223,6 +262,9 @@
 \draw[->] (leftT2) to[out=east, in=south] (leftC2);
 \draw[->] (rightV1) to[out=north east, in=south] (rightT1);
 \draw[->] (rightT1) to[out=north east, in=south] (rightC1);
+\draw[->] (rightV2) to[out=north east, in=south] (rightVaux2);
+\draw[->] (rightVaux2) to[out=north east, in=south] (rightT2);
+\draw[->] (rightT2) to[out=east, in=south] (rightC2);
 \end{forest}}
     \caption{Tree for \ref{sent:ex4b}}
     \label{fig:sent4b}
@@ -230,61 +272,79 @@
 \begin{figure}[H]
     \centering
 \begin{forest}, baseline, qtree
-[TP
-    [DP 
-        [DP [D' [D \\ Zi \\ I:\Gen]] ] 
-        [D' 
-            [NP 
-                [N' 
-                    [AdjP [Adj' [Adj \\ \v{g}we\v{c}'i \\ little]]]
-                    [N' [N \\ wax \\ sister]]
+    [CP
+        [C'
+            [TP
+                [T'
+                    [$V_{AUX}$P
+                        [$V_{AUX}'$
+                            [VP
+                                [V'
+                                    [V'
+                                        [DP
+                                            [D'
+                                                [NP[N'[N\\ Farid \\ Farid]]]
+                                                [D \\ $\varnothing$]
+                                            ]
+                                        ]
+                                        [\sout{V},name=v]
+                                    ]
+                                ]
+                                [DP
+                                    [D'
+                                        [NP [N' \\ mus \\ when]]
+                                        [D \\ $\varnothing$]
+                                    ]
+                                ]
+                            ]
+                            [\sout{V-$V_{AUX}$},name=vaux]
+                        ]
+                    ]
+                    [\sout{V-$V_{AUX}.T$},name=t]
                 ]
-            ] 
-            [D \\ $\varnothing_D$] 
+            ]
+            [V-$V_{AUX}.T$-C \\ ata-na-$\varnothing$ \\ come-\Aori-$\varnothing$,name=c]
         ]
     ]
-    [T'
-        [VP 
-            [V' [V \\ ata \\ come]]
-        ]
-        [T \\ na \\ \Aori]
-    ]
-]
+\draw[->] (v) to[out=north east, in=south] (vaux);
+\draw[->] (vaux) to[out=south, in=south] (t);
+\draw[->] (t) to[out=south, in=south] (c);
 \end{forest}
-    \caption{Complete tree for gloss \ref{sent:ex1}}
-    \label{fig:ex1}
+    \caption{Tree for \ref{sent:ex4d}}
 \end{figure}
 \begin{figure}[H]
     \centering
 \begin{minipage}{.4\textwidth}
-    \begin{forest}, baseline, qtree
-        [DP [D' [NP [N'
-            [CP [C'
-                [TP [T'
-                    [VP
-                        [V'
-                            [PP [P'
-                                [DP
+    \scalebox{.8}{
+        \begin{forest}, baseline, qtree
+            [DP [D' [NP [N'
+                [CP [C'
+                    [TP [T'
+                        [VP
+                            [V'
+                                [PP [P'
                                     [DP
-                                        [D' [NP [N' [N \\ kolkhoz \\ collective farm]]]
-                                            [D \\ di-n \\ \Gen]
+                                        [DP
+                                            [D' [NP [N' [N \\ kolkhoz \\ collective farm]]]
+                                                [D \\ di-n \\ \Gen]
+                                            ]
+                                        ]
+                                        [D'
+                                            [NP [N' [N \\ ja\v{s}aji\v{s} \\ life]]]
+                                            [D \\ di \\ \Obl]
                                         ]
                                     ]
-                                    [D'
-                                        [NP [N' [N \\ ja\v{s}aji\v{s} \\ life]]]
-                                        [D \\ di \\ \Obl]
-                                    ]
-                                ]
-                            [P \\ -kaj \\ \Sbelc]]]
-                            [V' [V \\ k\^{x}e \\ write]]
+                                [P \\ -kaj \\ \Sbelc]]]
+                                [V' [V \\ k\^{x}e \\ write]]
+                            ]
                         ]
-                    ]
-                    [T \\ -nwa- \\ \Prf]
-                ]]
-                [C \\ -j \\ \Ptcp]
-            ]] 
-            [N'[N\\ rasskaz-ar \\ story-\Pl]]]][D \\ $\varnothing_D$]]]
+                        [T \\ -nwa- \\ \Prf]
+                    ]]
+                    [C \\ -j \\ \Ptcp]
+                ]] 
+                [N'[N\\ rasskaz-ar \\ story-\Pl]]]][D \\ $\varnothing_D$]]]
         \end{forest}   
+    }
 \end{minipage}
 \hfill\begin{minipage}{.4\textwidth}
     \begin{forest}, baseline, qtree
@@ -308,99 +368,102 @@
         ]]
         \end{forest}
 \end{minipage}
-
 \caption{Complete tree for gloss \ref{sent:ex2a} and \ref{sent:ex2b}}
 \label{fig:ex2}
 \end{figure}
 
-
 \begin{figure}[H]
     \centering
     \begin{minipage}{.4\textwidth}
-        \begin{forest}, baseline, qtree
-            [TP
-                [DP
-                    [D'
-                        [NP
-                            [N'
-                                [N \\ kac \\ cat]
-                            ]
-                        ]
-                        [D \\ $\varnothing_D$]
-                    ]
-                ]
-                [T'
-                    [VP
-                        [V'
-                            [PP
-                                [P'
-                                    [DP 
-                                        [D'
-                                            [NP
-                                                [N'
-                                                    [N \\ stol \\ table]
-                                                ]
-                                            ]
-                                            [D'
-                                                [D \\ di-n \\ \Gen]
-                                            ]
-                                        ]
-                                    ]
-                                    [P \\ k'anik \\ under]
+        \scalebox{.8}{
+            \begin{forest}, baseline, qtree
+                [TP
+                    [DP
+                        [D'
+                            [NP
+                                [N'
+                                    [N \\ kac \\ cat]
                                 ]
                             ]
-                            [V'
-                                [V \\ aka\^{x} \\ enter]
-                            ]
+                            [D \\ $\varnothing_D$]
                         ]
                     ]
-                    [T \\ -na \\ \Aori]
+                    [T'
+                        [VP
+                            [V'
+                                [PP
+                                    [P'
+                                        [DP 
+                                            [D'
+                                                [NP
+                                                    [N'
+                                                        [N \\ stol \\ table]
+                                                    ]
+                                                ]
+                                                [D'
+                                                    [D \\ di-n \\ \Gen]
+                                                ]
+                                            ]
+                                        ]
+                                        [P \\ k'anik \\ under]
+                                    ]
+                                ]
+                                [V'
+                                    [V \\ aka\^{x} \\ enter]
+                                ]
+                            ]
+                        ]
+                        [T \\ -na \\ \Aori]
+                    ]
                 ]
-            ]
-        \end{forest}        
+            \end{forest}
+        } 
     \end{minipage}
     \hfill\begin{minipage}{.4\textwidth}
-        \begin{forest}, baseline, qtree
-            [TP
-                [DP
-                    [D'
-                        [NP
-                            [N'
-                                [N \\ kac \\ cat]
-                            ]
-                        ]
-                        [D \\ $\varnothing_D$]
-                    ]
-                ]
-                [T'
-                    [VP
-                        [V'
-                            [PP
-                                [P'
-                                    [DP 
-                                        [D'
-                                            [NP
-                                                [N'
-                                                    [N \\ stol \\ table]
-                                                ]
-                                            ]
-                                            [D'
-                                                [D \\ di-n \\ \Gen]
-                                            ]
-                                        ]
-                                    ]
-                                    [P \\ k'anikaj \\ from.under]
+        \scalebox{.8}{
+            \begin{forest}, baseline, qtree
+                [TP
+                    [DP
+                        [D'
+                            [NP
+                                [N'
+                                    [N \\ kac \\ cat]
                                 ]
                             ]
-                            [V'
-                                [V \\ xkec' \\ go.out]
-                            ]
+                            [D \\ $\varnothing_D$]
                         ]
                     ]
-                    [T \\ -na \\ \Aori]
+                    [T'
+                        [VP
+                            [V'
+                                [PP
+                                    [P'
+                                        [DP 
+                                            [D'
+                                                [NP
+                                                    [N'
+                                                        [N \\ stol \\ table]
+                                                    ]
+                                                ]
+                                                [D'
+                                                    [D \\ di-n \\ \Gen]
+                                                ]
+                                            ]
+                                        ]
+                                        [P \\ k'anikaj \\ from.under]
+                                    ]
+                                ]
+                                [V'
+                                    [V \\ xkec' \\ go.out]
+                                ]
+                            ]
+                        ]
+                        [T \\ -na \\ \Aori]
+                    ]
                 ]
-            ]
-        \end{forest}        
+            \end{forest}
+        }
+        
     \end{minipage}
     \caption{Complete Tree for gloss \ref{sent:ex3a} and \ref{sent:ex3b}}
     \label{fig:sent3}
