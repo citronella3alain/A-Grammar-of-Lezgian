@@ -17,11 +17,98 @@ As modifiers precede the head noun, the X' rules for the NP are as follows:
 
 Noun phrases in Lezgian do not allow postpositional phrases, $NP$s in oblique cases, or adverbs as adjunct modifiers (252). As such, English NPs that would normally require a PP adjunct such as ``stories about collective farm life" (c.f. gloss \ref{sent:ex2a} and \ref{sent:ex2b}) would employ a relative clause for the same meaning (252). 
 
+\ex. Relative clause, Adjective based on preposition: c.f. Figure \ref{fig:ex2} \\
+    \ag.\label{sent:ex2a}[Kolxoz.di-n ja\v{s}aji\v{s}.di-kaj k\^{x}e-nwa-j] rasskaz-ar \\
+        [kolkhoz-\Gen[] life-\Sbelc[] write-\Prf[]-\Ptcp[]] story-\Pl[] \\
+        ``stories about collective farm life" (252)
+    \bg.\label{sent:ex2b}revoljucija.di-laj wilikan \"{u}m\"{u}r \\
+        revolution-\Obl[]-\Srelc[] previous life \\
+        ``life before the revolution" (252)
+    \z.
+
+The tree representations of examples \ref{sent:ex2a} and \ref{sent:ex2b} are shown below:
+\begin{figure}[H]
+\centering
+\begin{minipage}{.4\textwidth}
+    \scalebox{.8}{
+        \begin{forest}, baseline, qtree
+            [DP [D' [NP [N'
+                [CP [C'
+                    [TP [T'
+                        [VP
+                            [V'
+                                [PP [P'
+                                    [DP
+                                        [DP
+                                            [D' [NP [N' [N \\ kolkhoz \\ collective farm]]]
+                                                [D \\ di-n \\ \Gen]
+                                            ]
+                                        ]
+                                        [D'
+                                            [NP [N' [N \\ ja\v{s}aji\v{s} \\ life]]]
+                                            [D \\ di \\ \Obl]
+                                        ]
+                                    ]
+                                [P \\ -kaj \\ \Sbelc]]]
+                                [V' [V \\ k\^{x}e \\ write]]
+                            ]
+                        ]
+                        [T \\ -nwa- \\ \Prf]
+                    ]]
+                    [C \\ -j \\ \Ptcp]
+                ]] 
+                [N'[N\\ rasskaz-ar \\ story-\Pl]]]][D \\ $\varnothing_D$]]]
+        \end{forest}   
+    }
+\end{minipage}
+\hfill\begin{minipage}{.4\textwidth}
+    \begin{forest}, baseline, qtree
+        [DP [D'
+            [NP [N'
+                [AdjP [Adj'
+                    [PP [P'
+                        [DP [D'
+                                [NP
+                                    [N' [N \\ revolucija \\ revolution]]
+                                ]
+                                [D \\ di \\ \Obl]
+                        ]]
+                        [P \\ laj \\ \Srelc]
+                    ]]
+                    [Adj \\ wikikan \\ previous]
+                ]]
+                [N'[N \\ \"{u}m\"{u}r \\ life]]
+            ]]
+            [D  \\ $\varnothing_D$]
+        ]]
+        \end{forest}
+\end{minipage}
+\caption{Complete tree for gloss \ref{sent:ex2a} and \ref{sent:ex2b}}
+\label{fig:ex2}
+\end{figure}
 Just as in English syntax, pronouns are determiners (c.f. gloss \ref{sent:ex1}. 
-%However, Lezgian determiners are otherwise different from English determiners. Lezgian lacks a definite article, i.e. has a null definite article, and although the numeral \textit{sa}, ``one" is used an indefinite article, it is optional. As seen by the demonstrative combination \textit{ha i-} (that this) in gloss \ref{sent:ex6a} and the co-occurence between the genitive pronoun and the demonstrative, demonstratives are not determiners. Instead, they are adjectives in Lezgian.
-However, as we see in gloss \ref{sent:ex6a}, since the demonstratives \textit{ha} (``that") and \textit{i} (``this") can form the combination ``ha i" (this) (190-191), demonstratives can co-occur and therefore cannot be determiners. This analysis is further supported by gloss \ref{sent:ex6b}, a construction that would be illegal under English syntax. This gloss reveals that demonstratives are actually of category N', similar to the English ``one". Refer to \todo{do trees} for the tree representations of these glosses. 
+
+\ex.\label{sent:ex1}Absolutive and Gentitive Forms of 1\Sg[] pronoun: c.f. Figure \ref{fig:ex1} for tree \\ 
+    \ag.Zun ata-na. \\
+        I:\Abs[] come-\Aori[] \\
+        ``I came. (251)
+    \bg. [Zi [\v{g}we\v{c}'i wax]] ata-na. \\
+        [I:\Gen[] [little sister]] came-\Aori[] \\
+        ``My little sister came. (251)
+    \z.
+
+However, as we see in gloss \ref{sent:ex6a}, since the demonstratives \textit{ha} (``that") and \textit{i} (``this") can form the combination ``ha i" (this) (190-191), demonstratives can co-occur and therefore cannot be determiners. This analysis is further supported by gloss \ref{sent:ex6b}, a construction that would be illegal under English syntax. This gloss reveals that demonstratives are actually of category N', similar to the English ``one". 
 
 Lezgian marks indefiniteness but not definiteness, as seen in gloss \ref{sent:ex6a}. However, what Haspelmath identifies as an optional indefinite article (230), \textit{sa} (``one"), is instead classified as an adjective in this paper. In its place, the oblique case endings fill the role as a determiner head when present. This classification allows for an analysis that preserves Lezgian's right-headedness while assigning a syntactic role for the oblique case markings. 
+
+\ex. Demonstratives co-occuring with each other or determiners \\
+    \ag.\label{sent:ex6a}Ha i klass.d-a sa mus jat'ani za-ni k'el-na-j. \\
+    that this class-\Inessc[] one when \Indf[] I:\Erg[]-also study-\Aori[]-\Pst[] \\
+    ``At one time I, too, was a student in this classroom." (191)
+    \bg.\label{sent:ex6b}i zi kic' \\
+    this I:\Gen[] dog \\
+    ``this my dog" (not: \textit{*dog of this I}) (261)
+    \z.
 
 The X' rules for the DP are thus summarized as follows:
 \begin{center}
@@ -31,8 +118,69 @@ The X' rules for the DP are thus summarized as follows:
     \end{tabular}
 \end{center}
 
-As shown in gloss \ref{sent:ex1}, genitive DPs serve as specifiers to the DP they modify.
+As shown in gloss \ref{sent:ex1}, genitive DPs serve as specifiers to the DP they modify. 
 
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.4\textwidth}
+        \scalebox{.75}{
+            \begin{forest}, baseline, qtree
+                [TP
+                    [T'
+                        [$V_{AUX}P$
+                            [$V_{AUX}'$
+                                [VP
+                                    [V'
+                                        [DP
+                                            [D' [D \\ Zun \\ 1\Sg.\Abs]]
+                                        ]
+                                        [\sout{V} \\ \sout{ata},name=v]
+                                    ]
+                                ]
+                                [\sout{$V_{AUX}$} \\ \sout{na},name=vaux]
+                            ]
+                    ]
+                    [V-$V_{AUX}$-T \\ ata-na \\ come-\Aori-$\varnothing$,name=t]
+                ]]
+                \draw[->](v)to[out=north east, in=south](vaux);
+                \draw[->](vaux)to[out=south east, in=south](t);
+            \end{forest}
+        }
+    \end{minipage}
+    \begin{minipage}{.4\textwidth}
+        \scalebox{.6}{
+            \begin{forest}, baseline, qtree
+                [TP
+                    [T'
+                        [$V_{AUX}P$ [$V_{AUX}'$
+                            [VP
+                                [DP 
+                                    [DP [DP [D' [D \\ ]]]
+                                        [D' [D \\ Zi \\ I:\Gen]] 
+                                        ] 
+                                        [D' 
+                                            [NP 
+                                                [N' 
+                                                    [AdjP [Adj' [Adj \\ \v{g}we\v{c}'i \\ little]]]
+                                                    [N' [N \\ wax \\ sister]]
+                                                ]
+                                            ] 
+                                    [D \\ $\varnothing_D$] 
+                                ]
+                            ]
+                                [V' [\sout{V},name=v]]
+                            ]
+                            [\sout{V-$V_{AUX}$},name=vaux]
+                        ]]
+                        [V-$V_{AUX}$-T \\ ata-na \\ come-\Aori-$\varnothing$,name=t]
+                    ]
+                ]
+                \draw[->] (v) to[out=north east, in=south] (vaux);
+                \draw[->] (vaux) to[out=north east, in=south] (t);
+            \end{forest}    
+        }
+    \end{minipage}
+    \caption{Tree for gloss \ref{sent:ex1}}
+    \label{fig:ex1}
+\end{figure}
 
-
-%Quantifiers such as \textit{(sa) t'imil} ([a] little, [a] few) \textit{(sa) b\"{a}zi} (some, several), \textit{sa \v{s}umud} (several), \textit{sa q'adar} (a certain amount), \textit{gzaf} (a lot), \textit{xejlin} (a lot), \textit{iq'wan} (so much, so many) (253) are classified here as adjectives rather than determiners. Refer to the next section for a discussion on this choice.

@@ -1,5 +1,67 @@
-Lezgian's agglutinative nature makes possible to isolate the affixes that indicate tense and aspect. Refer to the examples in glosses 
+Lezgian's agglutinative nature makes possible to isolate the affixes that indicate tense and aspect. Refer to the glosses in example \ref{sent:ex7}.
 
+\ex.\label{sent:ex7}Selected Verb Forms of \textit{fin} ``go" (127). Verb forms do not exhibit agreement. Trees for a, b, c represented in Figure \ref{fig:sent7} \\
+    \ag.fi-zwa \\
+    go-\Impf[] \\
+    \bg.fi-zwa-\v{c} \\
+    go-\Impf[]-\Neg[] \\
+    \cg.fi-zwa-j \\
+    go-\Impf[]-\Pst[] \\
+    \dg.fe-nwa \\
+    go-\Prf[] \\
+    \z.
+
+\begin{figure}[H]
+    \centering
+    \begin{minipage}{.3\textwidth}
+        \centering
+        \begin{forest}, baseline, qtree
+            [TP[T'
+                [$V_{\text{AUX}}P$
+                    [$V_{\text{AUX}}'$
+                        [VP [V' [V \\ fiz \\ go]]
+                        ]
+                        [\sout{$V_{\text{AUX}}$} \\ \sout{zwa},name=src]
+                    ]
+                ]
+                [$V_{\text{AUX}}-T$\\ zwa-$\varnothing$ \\ \Impf-$\varnothing$,name=dest]
+            ]]
+        \draw[->] (src) to[out=north east, in=south west] (dest);
+        \end{forest}
+    \end{minipage}
+    \begin{minipage}{.3\textwidth}
+    \begin{forest}, baseline, qtree
+        [TP[T'
+            [$V_{\text{AUX}}P$
+                [$V_{\text{AUX}}'$
+                    [VP [V' [V \\ fiz \\ go]]
+                    ]
+                    [\sout{$V_{\text{AUX}}$} \\ \sout{zwa},name=src]
+                ]
+                ]
+                [$V_{\text{AUX}}-T$\\ zwa-\v{c} \\ \Impf-\Neg,name=dest]
+            ]]
+        \draw[->] (src) to[out=north east, in=south west] (dest);
+        \end{forest}
+    \end{minipage}
+    \begin{minipage}{.3\textwidth}
+    \begin{forest}, baseline, qtree
+        [TP[T'
+            [$V_{\text{AUX}}P$
+                [$V_{\text{AUX}}'$
+                    [VP [V' [V \\ fiz \\ go]]
+                    ]
+                    [\sout{$V_{\text{AUX}}$} \\ \sout{zwa},name=src]
+                ]
+            ]
+            [$V_{\text{AUX}}-T$\\ zwa-j \\ \Impf-\Pst,name=dest]
+        ]]
+    \draw[->] (src) to[out=north east, in=south west] (dest);
+    \end{forest}
+    \end{minipage}
+    \caption{Imperfective affirmative, Imperfective Negative, Past Imperfective Affirmative from gloss \ref{sent:ex7}}
+    \label{fig:sent7}
+\end{figure}
 The phrase structure rules are written as follows:
 \begin{center}
     \begin{tabular}{r@{\hskip3pt}l}
@@ -9,5 +71,4 @@ The phrase structure rules are written as follows:
         $V_{AUX}'$ &\textrightarrow VP $V_{AUX}$ \\
     \end{tabular}
 \end{center}
-
 As such, it is possible to distinguish $V_{\text{AUX}}$ heads from T heads.

@@ -1,7 +1,15 @@
-Whereas Lezgian declarative sentences do not exhibit an overt complementizer, polar, i.e. yes-or-no, questions are expressed in Lezgian with the interrogative mood verb affix ``-ni" (417). This suffix can be classified as the complementizer in question formation (c.f. gloss \ref{sent:ex4a}). Similarly, when a question asks for a selection among a number of options, e.g. \textit{Professor.di ktab k'el-zawa-j-di j-ani ja ta\^{x}ajt'a k\^{x}i-zwa-j-di ja-ni?} (``Is the professor reading or writing a book?"), the suffix ``-ni" follows both verbs (418); this situation can be modelled as a conjunction phrase joining the two complementizer phrases where each conjunction phrase is headed by the ``-ni" suffix (c.f. gloss \ref{sent:ex4b}). 
+Whereas Lezgian declarative sentences do not exhibit an overt complementizer, polar, i.e. yes-or-no, questions are expressed in Lezgian with the interrogative mood verb affix ``-ni" (417). This suffix can be classified as the complementizer in question formation (c.f. example \ref{sent:ex4a}). Similarly, when a question asks for a selection among a number of options, e.g. example \ref{sent:ex4b}, this situation can be modelled as a conjunction phrase joining the two complementizer phrases where each conjunction phrase is headed by the ``-ni" suffix. 
 
 Unlike questions in English, Lezgian wh-questions do not move an interrogative phrase to a clause-initial position (421). Instead, the questioned constituent is subsituted with an interrogative pronoun (421). These wh-questions bear the conditional verb suffix \textit{-t'a}. This suffix serves as the complementizer for wh-questions.
 
+\ex. Polar and Binary-Choice Questions: \\
+    \ag.\label{sent:ex4a}Betxoven.a-n muzyka wa-z k'an-da-ni? \\
+    Beethoven.\Obl[]-\Gen[] music you-\Dat[] like-\Fut[]-\Q[] \\
+    ``Do you like Beethoven's music?" (417) (c.f. Figure \ref{fig:sent4a})
+    \bg.\label{sent:ex4b}Professor.di ktab k'el-zawa-j-di j-ani ja ta\^{x}ajt'a k\^{x}i-zwa-j-di ja-ni? \\
+    professor(\Erg[]) book read-\Impf[]-\Ptcp[]-\Sbstz[] \Cop[]-\Q[] or or write-\Impf[]-\Ptcp[]-\Sbstz[] \Cop[]-\Q[] \\
+    ``Is the professor reading or writing a book?" (418) (c.f. Figure \ref{fig:sent4b})
+    \z.
 
 Given this information and Lezgian's right-headedness, we write the CP rules as follows:
 \begin{center}
@@ -10,3 +18,161 @@ Given this information and Lezgian's right-headedness, we write the CP rules as 
         C' &\textrightarrow TP C
     \end{tabular}
 \end{center}
+Below are the tree representations of the sentences in examples \ref{sent:ex4a} and \ref{sent:ex4b}.
+
+\begin{figure}[H]
+    \centering
+\begin{forest}, baseline, qtree
+[CP[C'
+    [TP
+        [DP,name=tgt
+        [DP [D'
+                [NP [N' [N \\ Betxoven \\ Beethoven]
+                                ]]
+            [D \\ .a-n \\ \Obl-\Gen]
+                ]]
+                    [D'
+                        [NP [N'[N \\ muzyka \\ music]]]
+                        [D \\ $\varnothing_D$]
+                    ]
+        ]
+        [T'
+            [VP
+                [DP
+                        [D'[D \\ wa-z \\ you-\Dat]]
+                ]
+                [V'
+                    [\sout{DP},name=src]
+                    [V \\ k'an \\ like]
+                ]
+            ]
+            [T \\ -da- \\ \Fut]
+        ]
+    ]
+    [C \\ -ni \\ \Q]
+]]
+\draw[->] (src) to[out=north, in=east] (tgt);
+\end{forest}
+    \caption{Complete tree for gloss \ref{sent:ex4a}}
+    \label{fig:sent4a}
+\end{figure}
+\begin{figure}[H]
+    \centering
+\scalebox{0.8}{\begin{forest}, baseline, qtree
+[CP
+    [CP
+        [C'
+            [TP
+                [DP,name=newprofdp
+                    [D'
+                        [NP
+                            [N'
+                                [N \\ Professor \\ professor]
+                            ]
+                        ]
+                        [D \\ di-$\varnothing$ \\ \Obl-\Erg]
+                    ]
+                ]
+                [T'
+                    [VP
+                        [V'
+                            [DP
+                                [D'
+                                    [NP
+                                        [CP [C'
+                                            [TP
+                                                [T'
+                                                    [$V_{AUX}P$
+                                                        [$V_{AUX}'$
+                                                            [VP
+                                                                [\sout{DP},name=leftDP]
+                                                                [V'
+                                                                    [DP [D' [NP[N'[N \\ ktab]]][D \\ $\varnothing_D$]]]
+                                                                    [\sout{V},name=leftV2]
+                                                                ]
+                                                            ]
+                                                            [\sout{$V_{AUX}$},name=leftVaux2]
+                                                        ]
+                                                    ]
+                                                    [\sout{T},name=leftT2]
+                                                ]
+                                            ]
+                                            [V-$V_{AUX}$-T-C \\ k'el-zawa-j-$\varnothing$ \\ read-\Impf-\Ptcp,name=leftC2]
+                                        ]]
+                                        [N'
+                                            [N \\ di \\ \Sbstz]
+                                        ]
+                                    ]
+                                    [D \\ $\varnothing_D$]
+                                ]
+                            ]
+                            [\sout{V},name=leftV1]
+                        ]
+                    ]
+                    [\sout{V-T},name=leftT1]
+                ]
+            ]
+            [V-T-C \\ ja-$\varnothing$-ni \\ \Cop-$\varnothing$-\Q,name=leftC1]
+        ]
+    ]
+    [Conj \\ ja ta\^{x}ajt'a \\ or]
+    [CP [C'
+        [TP
+            [T'
+                [VP
+                    [V'
+                        [DP
+                            [D'
+                                [NP
+                                    [CP
+                                        [C'
+                                            [TP
+                                                [T'
+                                                [$V_{AUX}P$
+                                                    [$V_{AUX}'$
+                                                        [VP
+                                                            [V'
+                                                                [\sout{V},name=rightV2]
+                                                            ]
+                                                        ]
+                                                        [\sout{V-$V_{AUX}$},name=rightVaux2]
+                                                    ]
+                                                ]
+                                                    [\sout{V-$V_{AUX}$T},name=rightT2]
+                                                ]
+                                            ]
+                                            [V-$V_{AUX}$-T-C \\ k\^{x}i-zawa-j-$\varnothing$ \\ write-\Impf-\Ptcp,name=rightC2]
+                                        ]
+                                    ]
+                                    [N'
+                                        [N \\ di \\ \Sbstz]
+                                    ]
+                                ]
+                                [D \\ $\varnothing_D$]
+                            ]
+                        ]
+                        [V,name=rightV1]
+                    ]
+                ]
+                [V-T,name=rightT1]
+            ]
+        ]
+        [V-T-C \\ \Cop-$\varnothing$-\Q,name=rightC1]
+    ]]
+]
+\draw[->] (leftDP) to[out=north west, in=west] (newprofdp);
+\draw[->] (leftV1) to[out=north east, in=south] (leftT1);
+\draw[->] (leftT1) to[out=north east, in=south] (leftC1);
+\draw[->] (leftV2) to[out=north east, in=south] (leftVaux2);
+\draw[->] (leftVaux2) to[out=north east, in=south] (leftT2);
+\draw[->] (leftT2) to[out=east, in=south] (leftC2);
+\draw[->] (rightV1) to[out=north east, in=south] (rightT1);
+\draw[->] (rightT1) to[out=north east, in=south] (rightC1);
+\draw[->] (rightV2) to[out=north east, in=south] (rightVaux2);
+\draw[->] (rightVaux2) to[out=north east, in=south] (rightT2);
+\draw[->] (rightT2) to[out=east, in=south] (rightC2);
+\end{forest}}
+    \caption{Tree for \ref{sent:ex4b}}
+    \label{fig:sent4b}
+\end{figure}
+
